@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.dao.UserDao">
+
+    <sql id="findUser">
+        <where>
+            <if test="user!=null">
+                <if test="user.username!=null and user.username.length>0">
+                    username LIKE '%${user.username}%'
+                </if>
+                <if test="user.address!=null and user.address.length>0">
+                    or address LIKE '%${user.address}%'
+                </if>
+                <if test="user.email!=null and user.email.length>0">
+                    or email LIKE '%${user.email}%'
+                </if>
+            </if>
+        </where>
+    </sql>
+
+
+    <!--遍历所有-->
+    <select id="findAll" parameterType="pages" resultType="user">
+        SELECT  * FROM user
+        <include refid="findUser"/>
+        <if test="startNum!=null">
+          limit #{startNum},#{pageCounts}
+        </if>
+    </select>
+
+    <select id="findCounts" parameterType="pages" resultType="integer">
+        SELECT count(1) FROM user
+       <include refid="findUser"/>
+    </select>
+    <!--登陆操作-->
+    <select id="findUser" parameterType="user" resultType="user">
+        SELECT  * FROM user WHERE username=#{username} and pwd=#{pwd}
+    </select>
+
+    <insert id="saveUser" parameterType="user">
+        INSERT INTO user(username,pwd,age,sex,address,qq,email) values(#{username},#{pwd},#{age},#{sex},#{address},#{qq},#{email})
+    </insert>
+</mapper>

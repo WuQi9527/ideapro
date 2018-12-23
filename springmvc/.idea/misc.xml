@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/spring_day01_start" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_day02" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_day02_exception" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_day02_fileupload" />
+    <file type="web" url="file://$PROJECT_DIR$/ssm" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/spring_day01_start/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_day02/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_day02_fileupload/pom.xml" />
+        <option value="$PROJECT_DIR$/ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_day02_exception/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring_day01_start" />
+        <module name="springmvc_day02" />
+        <module name="springmvc_day02_exception" />
+        <module name="springmvc_day02_fileupload" />
+        <module name="ssm_itheima_dao" />
+        <module name="ssm_itheima_daomain" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring_day01_start" target="1.8" />
+      <module name="springmvc_day02" target="1.8" />
+      <module name="springmvc_day02_exception" target="1.8" />
+      <module name="springmvc_day02_fileupload" target="1.8" />
+      <module name="ssm" target="1.8" />
+      <module name="ssm_itheima_dao" target="1.7" />
+      <module name="ssm_itheima_daomain" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
