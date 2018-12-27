@@ -1,8 +1,10 @@
 package com.itheima.domain;
 
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Product {
+public class Product implements Serializable {
     private String id; // 主键
     private String productNum; // 编号 唯一
     private String productName; // 名称
@@ -47,6 +49,7 @@ public class Product {
     }
 
     public Date getDepartureTime() {
+
         return departureTime;
     }
 
@@ -55,6 +58,10 @@ public class Product {
     }
 
     public String getDepartureTimeStr() {
+        if(departureTime!=null){
+
+            departureTimeStr=new SimpleDateFormat("yyyy-MM-dd").format(departureTime);
+        }
         return departureTimeStr;
     }
 
@@ -87,6 +94,12 @@ public class Product {
     }
 
     public String getProductStatusStr() {
+        if (productStatus==0){
+            productStatusStr="开启";
+        }else if (productStatus==1){
+            productStatusStr="关闭";
+        }
+
         return productStatusStr;
     }
 
